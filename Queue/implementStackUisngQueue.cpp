@@ -18,6 +18,9 @@ public:
     }
     
     int pop() {
+        if(q1.empty()){
+            return -1;
+        }
        int val =q1.front();
         q1.pop();
         return val;
