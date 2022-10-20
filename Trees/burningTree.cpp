@@ -1,7 +1,4 @@
 //{ Driver Code Starts
-//Initial Template for C++
-//algo
-
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -193,3 +190,11 @@ int main()
 }
 
 // } Driver Code Ends
+//algo
+//a node burns all neighbours ie left right and parent ek saath
+//so keep track of parents by mapping each node to its parent done using level order traversal
+//with that find target node that was burned frst
+//pass this node to a function start from target node if it has unvisited neigbours 
+//push them to q, mark them visited , flag=true
+//flag keeps track of insertion in que
+//when in any iteration insertion is made time++
