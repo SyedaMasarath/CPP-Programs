@@ -104,6 +104,7 @@ class Solution {
       if(root==NULL){
           return true;
       }
+      //if index exceedes no of nodes
       if(index>=count){
           return false;
       }
