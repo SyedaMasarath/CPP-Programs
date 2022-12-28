@@ -20,9 +20,10 @@ class Solution
 	        
 	        if(!vis[nbr]){
 	            dfs(nbr,node,adj,disc,low,vis,timer,result);
-	            
+	            //update low of nbr in case there is another way to reach node or any backedge present
 	            low[node]=min(low[node],low[nbr]);
 	            
+                //check for bridge edge condition
 	            if(low[nbr]>disc[node]){
 	                vector<int> ans;
 	                ans.push_back(node);
@@ -31,6 +32,7 @@ class Solution
 	            }
 	        }
 	        else{
+                //if nbr is vis, it may be a backedge, update low of curr node
 	            low[node]=min(low[node],disc[nbr]);
 	        }
 	    }
